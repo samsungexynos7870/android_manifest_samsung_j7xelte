@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+    <!--
+    * target: j7xelte
+    * rom: Skyhawk Recovery Project
+    -->
+
+    <!-- Remote -->
+    <remote fetch="https://github.com/samsungexynos7870" name="samsungexynos7870" />
+	
+    <!-- Device -->
+    <project name="android_device_samsung_j7xelte" path="device/samsung/j7xelte" remote="samsungexynos7870" revision="skyhawk" />
+
+    <!-- Kernel -->
+    <project name="android_kernel_samsung_exynos7870" path="kernel/samsung/exynos7870" remote="samsungexynos7870" revision="skyhawk" />
+		
+</manifest>
