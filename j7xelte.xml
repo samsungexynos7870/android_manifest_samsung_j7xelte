@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+    <!--
+    * target: j7xelte
+    * rom: OrangeFox Recovery Project
+    -->
+
+    <!-- Remote -->
+    <remote fetch="https://gitlab.com/android_samsung_universal7870" name="j7xelte" />
+	
+    <!-- Device -->
+    <project name="device/android_device_samsung_j7xelte" path="device/samsung/j7xelte" remote="j7xelte" revision="fox_9.0" />
+
+    <!-- Kernel -->
+    <project name="common/android_kernel_samsung_exynos7870" path="kernel/samsung/exynos7870" remote="j7xelte" revision="fox_9.0" />
+		
+</manifest>
