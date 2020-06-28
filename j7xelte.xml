@@ -2,16 +2,24 @@
 <manifest>
     <!--
     * target: j7xelte
-    * rom: OrangeFox Recovery Project
+    * rom: POSP
     -->
 
     <!-- Remote -->
-    <remote fetch="https://gitlab.com/android_samsung_universal7870" name="j7xelte" />
+    <remote fetch="https://gitlab.com/android_samsung_universal7870" name="exynos7870" />
 	
     <!-- Device -->
-    <project name="device/android_device_samsung_j7xelte" path="device/samsung/j7xelte" remote="j7xelte" revision="fox_9.0" />
+    <project name="device/android_device_samsung_j7xelte" path="device/samsung/j7xelte" remote="exynos7870" revision="potato" />
+    <project name="device/android_device_samsung_universal7870-common" path="device/samsung/universal7870-common" remote="exynos7870" revision="potato" />
 
     <!-- Kernel -->
-    <project name="common/android_kernel_samsung_exynos7870" path="kernel/samsung/exynos7870" remote="j7xelte" revision="fox_9.0" />
+    <project name="common/android_kernel_samsung_exynos7870" path="kernel/samsung/exynos7870" remote="exynos7870" revision="aosp" />
+
+    <!-- Vendor -->
+    <project name="vendor/android_vendor_samsung_j7xelte" path="vendor/samsung/j7xelte" remote="exynos7870" revision="common" />
+    <project name="vendor/android_vendor_samsung_universal7870-common" path="vendor/samsung/universal7870-common" remote="exynos7870" revision="common" />
+
+    <!-- Hardware -->   
+    <project name="common/android_hardware_samsung" path="hardware/samsung" remote="exynos7870" revision="aosp" />
 		
 </manifest>

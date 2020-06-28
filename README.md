@@ -1,27 +1,30 @@
-# OrangeFox Recovery Project
+# POSP Croquette
 
 ### How to build ###
 
 ```bash
 # Create dirs
-$ mkdir ofox ; cd ofox
+$ mkdir posp ; cd posp
 
 # Init repo
-$ repo init --depth=1 -u https://gitlab.com/OrangeFox/Manifest.git -b fox_9.0
+$ repo init --depth=1 -u https://github.com/PotatoProject/manifest -b croquette-release
 
-# Clone my local repo
-$ git clone https://gitlab.com/android_samsung_universal7870/manifest/android_manifest_samsung_j7xelte.git -b orangefox .repo/local_manifests
+# Clone local manifest
+$ git clone https://gitlab.com/android_samsung_universal7870/manifest/android_manifest_samsung_j7xelte.git -b potato .repo/local_manifests
 
 # Sync
-$ repo sync --no-repo-verify -c --force-sync --no-clone-bundle --no-tags --optimized-fetch --prune -j`nproc`
+$ repo sync --force-sync
 
 # Build
-$ mv device/samsung/j7xelte/build_ofox.sh .
-$ . build_ofox.sh j7xelte
+For 8GB RAM
+$ . build/envsetup.sh && lunch potato_j7xelte-userdebug && mka clean && mka api-stubs-docs && mka hiddenapi-lists-docs && mka system-api-stubs-docs && mka test-api-stubs-docs && mka bacon -j`nproc`
+
+For 16GB RAM or more 
+$ . build/envsetup.sh && mka clean && brunch potato_j7xelte-userdebug
 ```
 
 ## Credits
-2019 @Astrako
+2019 @Astrako, POSP and LOS branches kept up to date by @Sap1k
 
 ## Contact
 Telegram support group: https://t.me/joinchat/D1Jk_VbieGBXOWZt2y8O7A
