@@ -10,8 +10,5 @@
 	
     <!-- Device -->
     <project name="android_device_samsung_j7xelte" path="device/samsung/j7xelte" remote="samsungexynos7870" revision="skyhawk" />
-
-    <!-- Kernel -->
-    <project name="android_kernel_samsung_exynos7870" path="kernel/samsung/exynos7870" remote="samsungexynos7870" revision="skyhawk" />
 		
 </manifest>
