@@ -1,27 +1,29 @@
-# OrangeFox Recovery Project
+# Lineage OS Android 12.1
 
 ### How to build ###
 
 ```bash
 # Create dirs
-$ mkdir ofox ; cd ofox
+$ mkdir lineage && cd lineage
 
 # Init repo
-$ repo init --depth=1 -u https://gitlab.com/OrangeFox/Manifest.git -b fox_9.0
+$ repo init -u https://github.com/LineageOS-UL/android.git -b lineage-19.1 --git-lfs
+(already patched for ultra legacy devices) or use
+$ repo init -u https://github.com/LineageOS/android.git -b lineage-19.1 --git-lfs
+(still needs to be patched for ultra legacy devices)
 
-# Clone j7xelte repo
-$ git clone https://gitlab.com/OrangeFox/device/j7xelte.git -b fox_9.0 device/samsung/j7xelte
+# Clone my local repo
+$ git clone https://github.com/samsungexynos7870/android_manifest_samsung_j7xelte.git -b lineage-19.1-oss_bsp-vndk .repo/local_manifests
 
 # Sync
-$ repo sync --no-repo-verify -c --force-sync --no-clone-bundle --no-tags --optimized-fetch --prune -j`nproc`
+$ repo sync --no-repo-verify -c --force-sync --no-clone-bundle --no-tags --optimized-fetch --prune -j`nproc` -v
 
 # Build
-$ mv device/samsung/j7xelte/build_ofox.sh .
-$ . build_ofox.sh j7xelte
+$ . build/envsetup.sh && brunch lineage_j7xelte-user
 ```
 
 ## Credits
-2019 @Astrako
+2021 @Astrako 2022 @FlominatorGD 2024 @GonicDroid
 
 ## Contact
-Telegram support group: https://t.me/joinchat/D1Jk_VbieGBXOWZt2y8O7A
+None.

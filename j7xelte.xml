@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+    <!--
+    * target: j7xelte
+    * rom: LineageOS 19.1
+    -->
+
+    <!-- Remote -->
+    <remote fetch="https://github.com/samsungexynos7870" name="gitty" />
+    
+    <!-- Device -->
+    <project name="android_device_samsung_j7xelte" path="device/samsung/j7xelte" remote="gitty" revision="lineage-19.1-oss_bsp-vndk" />
+    <project name="android_device_samsung_universal7870-common" path="device/samsung/universal7870-common" remote="gitty" revision="lineage-19.1-oss_bsp-vndk" />
+
+    <!-- Kernel -->
+    <project name="android_kernel_samsung_exynos7870" path="kernel/samsung/exynos7870" remote="gitty" revision="aosp-12-vendor-stageing" />
+
+    <!-- Vendor -->
+    <project name="android_vendor_samsung_j7xelte" path="vendor/samsung/j7xelte" remote="gitty" revision="12.1-oss_bsp-vndk" />
+    <project name="android_vendor_samsung_universal7870-common" path="vendor/samsung/universal7870-common" remote="gitty" revision="12.1-oss_bsp-vndk" />
+    
+    <!-- Hardware -->
+    <project name="android_hardware_samsung" path="hardware/samsung" remote="gitty" revision="lineage-19.1-universal7870" />
+    
+    <!-- board support package (bsp) -->
+    <project name="android_hardware_samsung_slsi-linaro_config" path="hardware/samsung_slsi-linaro/config" remote="gitty" revision="lineage-19.1" />
+    <project name="android_hardware_samsung_slsi-linaro_graphics" path="hardware/samsung_slsi-linaro/graphics" remote="gitty" revision="lineage-19.1" />
+    <project name="android_hardware_samsung_slsi-linaro_exynos" path="hardware/samsung_slsi-linaro/exynos" remote="gitty" revision="lineage-19.1" />
+    <project name="android_hardware_samsung_slsi-linaro_openmax" path="hardware/samsung_slsi-linaro/openmax" remote="gitty" revision="lineage-19.1" />
+    <project name="android_hardware_samsung_slsi-linaro_exynos5" path="hardware/samsung_slsi-linaro/exynos5" remote="gitty" revision="lineage-19.1" />
+
+    <!-- Remote -->
+    <remote fetch="https://github.com/LineageOS" name="slsi-sepolicy" />
+    <!-- Slsi SEpolicy -->
+    <project name="android_device_samsung_slsi_sepolicy" path="device/samsung_slsi/sepolicy" remote="slsi-sepolicy" revision="lineage-19.1" />
+
+</manifest>
