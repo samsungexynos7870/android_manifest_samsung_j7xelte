@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+    <!--
+    * target: j7xelte
+    * rom: LineageOS 22.2
+    -->
+
+    <!-- Remote -->
+    <remote fetch="https://github.com/samsungexynos7870" name="gitty" />
+    
+    <!-- Device -->
+    <project name="android_device_samsung_j7xelte" path="device/samsung/j7xelte" remote="gitty" revision="lineage-22.2" />
+    <project name="android_device_samsung_universal7870-common" path="device/samsung/universal7870-common" remote="gitty" revision="lineage-22.2" />
+
+    <!-- Kernel -->
+    <project name="android_kernel_samsung_exynos7870" path="kernel/samsung/exynos7870" remote="gitty" revision="lineage-22.2" />
+
+    <!-- Vendor -->
+    <project name="android_vendor_samsung_j7xelte" path="vendor/samsung/j7xelte" remote="gitty" revision="lineage-22.2" />
+    <project name="android_vendor_samsung_universal7870-common" path="vendor/samsung/universal7870-common" remote="gitty" revision="lineage-22.2" />
+    <project name="android_vendor_samsung_universal7870-common-patches" path="vendor/samsung/universal7870-common-patches" remote="gitty" revision="lineage-22.2" />
+    
+    <!-- board support package (bsp) -->
+    <project name="android_hardware_samsung_slsi-linaro_config" path="hardware/samsung_slsi-linaro/config" remote="gitty" revision="lineage-22.2" />
+    <project name="android_hardware_samsung_slsi-linaro_graphics" path="hardware/samsung_slsi-linaro/graphics" remote="gitty" revision="lineage-22.2" />
+    <project name="android_hardware_samsung_slsi-linaro_exynos" path="hardware/samsung_slsi-linaro/exynos" remote="gitty" revision="lineage-22.2" />
+    <project name="android_hardware_samsung_slsi-linaro_openmax" path="hardware/samsung_slsi-linaro/openmax" remote="gitty" revision="lineage-22.2" />
+    <project name="android_hardware_samsung_slsi-linaro_exynos5" path="hardware/samsung_slsi-linaro/exynos5" remote="gitty" revision="lineage-22.2" />
+    <project name="android_hardware_samsung_slsi-linaro_exynos7870" path="hardware/samsung_slsi-linaro/exynos7870" remote="gitty" revision="lineage-22.2" />
+
+    <!-- Remote -->
+    <remote fetch="https://github.com/LineageOS" name="lineage-imports" />
+    
+    <!-- Slsi SEpolicy -->
+    <project name="android_device_samsung_slsi_sepolicy" path="device/samsung_slsi/sepolicy" remote="lineage-imports" revision="lineage-22.2" />
+
+    <!-- Hardware -->
+    <project name="android_hardware_samsung" path="hardware/samsung" remote="lineage-imports" revision="lineage-22.2" />
+
+</manifest>
